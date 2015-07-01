@@ -7,19 +7,19 @@
 					<input type="text" name="name" class="form-control" ng-model="user.userData.name" placeholder="Name"/><br/>
 					<div class="error" ng-show="signup_form.name.$dirty && signup_form.name.$invalid && signup_form.submitted">
 						<small class="error" ng-show="signup_form.name.$error.required">
-							Name is required
+							*Name is required
 						</small>
 					</div>
 					<input type="text" name="username" class="form-control" ng-model="user.userData.username" placeholder="Username"/><br/>
 					<div class="error" ng-show="signup_form.username.$dirty && signup_form.username.$invalid && signup_form.submitted">
 						<small class="error" ng-show="signup_form.username.$error.required">
-							Username is required
+							*Username is required
 						</small>
 					</div>
 					<input type="password" name="password" class="form-control" ng-model="user.userData.password" placeholder="Password"/>
 					<div class="error" ng-show="signup_form.password.$dirty && signup_form.password.$invalid && signup_form.submitted">
 						<small class="error" ng-show="signup_form.password.$error.required">
-							Password is required
+							*Password is required
 						</small>
 					</div>
 					<br/>
