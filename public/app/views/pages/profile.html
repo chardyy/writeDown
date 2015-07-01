@@ -1,7 +1,16 @@
 <div class="container" ng-controller="ProfileController as profile">
 	<div class="row">
 		<div class="col-sm-6 col-md-4 col-md-offset-4">
-			<h1>This is the profile page.</h1>
+			<form method="put" ng-submit="user.updateUser()">
+				<fieldset>
+					<legend>Edit</legend>
+						<input type="text" name="name" class="form-control" ng-model="user.userData.name" placeholder="Name"/><br/>
+						<input type="text" name="username" class="form-control" ng-model="user.userData.username" placeholder="Username"/><br/>
+			
+						<br/>
+						<button type="submit" class="btn btn-info">Update</button>
+				</fieldset>
+			</form>
 		</div>
 	</div>
 </div>
