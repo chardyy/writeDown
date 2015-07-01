@@ -1,5 +1,7 @@
-angular.module('profileCtrl', [])
+angular.module('profileCtrl', ['profileService'])
 
-.controller('ProfileController', function(){
+.controller('ProfileController', function(Profile){
+
+	var vm = this;
 	
 })

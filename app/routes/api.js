@@ -70,6 +70,28 @@ module.exports = function(app, express, io){
 	});
 	//end of api-post request
 
+	//update user profile
+
+	api.put('/profile', function(){
+
+		var newUser = new User({
+			name: req.body.name,
+			username: req.body.username
+		});
+
+		newUser.save(function(err){
+			if(err){
+				res,send(err);
+				return;
+			}
+
+			res.json({
+				success: true,
+				message: 'User has been updated'
+			});
+		});
+	});
+
 
 	//api get-request
 	api.get('/users', function(req, res){
