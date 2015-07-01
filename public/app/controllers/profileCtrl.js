@@ -4,7 +4,7 @@ angular.module('profileCtrl', ['profileService'])
 
 	var vm = this;
 
-	newUser.update()
+	Profile.update()
 		   .success(function(data){
 		   		vm.user = data;
 		   })
