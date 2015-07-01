@@ -1,12 +1,27 @@
 <div class="container" ng-controller="UserCreateController as user">
 	<div class="row">
 		<div class="col-sm-6 col-md-4 col-md-offset-4">
-			<form method="post" ng-submit="user.signupUser()">
+			<form method="post" novalidate ng-submit="user.signupUser()" name="signup_form">
 				<fieldset>
 				<legend>Signup</legend>
 					<input type="text" name="name" class="form-control" ng-model="user.userData.name" placeholder="Name"/><br/>
+					<div class="error" ng-show="signup_form.name.$dirty && signup_form.name.$invalid && signup_form.submitted">
+						<small class="error" ng-show="signup_form.name.$error.required">
+							Name is required
+						</small>
+					</div>
 					<input type="text" name="username" class="form-control" ng-model="user.userData.username" placeholder="Username"/><br/>
+					<div class="error" ng-show="signup_form.username.$dirty && signup_form.username.$invalid && signup_form.submitted">
+						<small class="error" ng-show="signup_form.username.$error.required">
+							Username is required
+						</small>
+					</div>
 					<input type="password" name="password" class="form-control" ng-model="user.userData.password" placeholder="Password"/>
+					<div class="error" ng-show="signup_form.password.$dirty && signup_form.password.$invalid && signup_form.submitted">
+						<small class="error" ng-show="signup_form.password.$error.required">
+							Password is required
+						</small>
+					</div>
 					<br/>
 					<button type="submit" class="btn btn-info">Signup</button>
 				</fieldset>
