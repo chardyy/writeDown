@@ -72,7 +72,7 @@ module.exports = function(app, express, io){
 
 	//update user profile
 
-	api.put('/profile', function(){
+	api.put('/profile', function(req, res){
 
 		var newUser = new User({
 			name: req.body.name,
