@@ -24,7 +24,6 @@ function createToken(user){
 }
 
 //first api creation
-
 module.exports = function(app, express, io){
 
 	var api = express.Router();
@@ -192,7 +191,6 @@ module.exports = function(app, express, io){
 	//chain of the api-request
 
 	//last api to communicate with angular.
-
 		api.get('/me', function(req, res){
 			res.json(req.decoded);
 		});

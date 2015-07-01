@@ -1,4 +1,4 @@
-angular.module('Listnr', ['appRoutes','mainCtrl', 'authService', 'userCtrl', 'userService', 'storyService', 'storyCtrl', 'reverseDirective'])
+angular.module('Listnr', ['appRoutes','mainCtrl', 'authService', 'userCtrl', 'userService', 'storyService', 'storyCtrl', 'allStoriesCtrl', 'reverseDirective'])
 
 .config(function($httpProvider){
 
