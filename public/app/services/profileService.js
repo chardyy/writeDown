@@ -3,15 +3,12 @@ angular.module('profileService', [])
 
 .factory('Profile', function($http){
 
-	var userFactory = {};
+	var profileFactory = {};
 
-	userFactory.create = function(userData){
-		return $http.post('/api/signup', userData);
+	profileFactory.update = function(profileData){
+		return $http.put('/api/profile', profileData);
 	}
 
-	userFactory.all = function(){
-		return $http.get('/api/users');
-	}
-
-	return userFactory;
+	
+	return profileFactory;
 });
