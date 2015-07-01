@@ -1,10 +1,10 @@
 angular.module('profileCtrl', ['profileService'])
 
-.controller('ProfileController', function(Profile){
+.controller('ProfileController', function(Profile, User){
 
 	var vm = this;
 
-	profile.update()
+	user.update()
 		   .success(function(data){
 		   		vm.user = data;
 		   })
