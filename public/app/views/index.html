@@ -29,7 +29,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li ng-if="!main.loggedIn"><a href="/login">Login</a></li>				
 				<li ng-if="!main.loggedIn"><a href="/signup">Signup</a></li>				
-				<li ng-if="main.loggedIn"><a href="/profile">Hi! <b>{{ main.user.username }}</b> </a></li>				
+				<li ng-if="main.loggedIn"><a href="/profile">Hi! <b>{{ main.user.name }}</b> </a></li>				
 				<li ng-if="main.loggedIn"><a href="/login" ng-click="main.doLogout()">Logout</a></li>				
 			</ul>
 		</div>
