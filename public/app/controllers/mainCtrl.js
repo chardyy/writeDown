@@ -1,6 +1,9 @@
-angular.module('mainCtrl', [])
+(function(){
+	'use strict';
 
-.controller('MainController', function($rootScope, $location, Auth){
+	angular.module('mainCtrl', [])
+
+	.controller('MainController', function($rootScope, $location, Auth){
 
 	var vm = this;
 
@@ -40,6 +43,7 @@ angular.module('mainCtrl', [])
 		Auth.logout();
 		$location.path('/logout');
 	}
-	
-});
-//end controller
+
+	});
+	//end controller
+})();

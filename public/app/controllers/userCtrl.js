@@ -1,7 +1,10 @@
-angular.module('userCtrl', ['userService'])
+(function(){
+	'use strict';
+	
+	angular.module('userCtrl', ['userService'])
 
 
-.controller('UserController', function(User){
+	.controller('UserController', function(User){
 
 
 	var vm = this;
@@ -14,8 +17,8 @@ angular.module('userCtrl', ['userService'])
 			vm.users = data;
 		})
 
-})
-.controller('UserCreateController', function(User, $location, $window){
+	})
+	.controller('UserCreateController', function(User, $location, $window){
 
 	var vm = this;
 
@@ -32,4 +35,5 @@ angular.module('userCtrl', ['userService'])
 			})
 	}
 
-})
+	})
+})();

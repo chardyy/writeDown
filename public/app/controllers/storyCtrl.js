@@ -1,30 +1,34 @@
-angular.module('storyCtrl', ['storyService'])
+(function(){
+    'use strict';
 
-.controller('StoryController', function(Story, socketio){
+    angular.module('storyCtrl', ['storyService'])
 
-	var vm = this;
+    .controller('StoryController', function(Story, socketio){
 
-	Story.allStory()
-		 .success(function(data){
-		 	vm.stories = data;
-		 });
+    var vm = this;
+
+    Story.allStory()
+         .success(function(data){
+            vm.stories = data;
+         });
 
 
     vm.createStory = function(){
-    	vm.message = '';
-    	Story.create(vm.storyData)
-    	 	 .success(function(data){
+        vm.message = '';
+        Story.create(vm.storyData)
+             .success(function(data){
 
-    	 	 	//clear up the form.
-    	 	 	vm.storyData = '';
+                //clear up the form.
+                vm.storyData = '';
 
-    	 	 	vm.message = data.message;
-    	 	 	
-    	 	 });
+                vm.message = data.message;
+                
+             });
     };
 
     socketio.on('story', function(data){
-    	vm.stories.push(data);
+        vm.stories.push(data);
     })
 
-})
+    })
+})();
