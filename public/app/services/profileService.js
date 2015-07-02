@@ -6,9 +6,8 @@ angular.module('profileService', [])
 	var profileFactory = {};
 
 	profileFactory.update = function(profileData){
-		return $http.put('/api/profile', profileData);
+		return $http.put('/api', profileData);
 	}
 
-	
 	return profileFactory;
 });
