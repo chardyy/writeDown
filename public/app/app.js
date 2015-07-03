@@ -1,7 +1,12 @@
-angular.module('Listnr', ['appRoutes','mainCtrl', 'authService', 'userCtrl', 'userService', 'storyService', 'storyCtrl', 'allStoriesCtrl', 'profileCtrl', 'profileService', 'reverseDirective'])
+(function(){
+	'use strict';
 
-.config(function($httpProvider){
+		angular.module('Listnr', ['appRoutes','mainCtrl', 'authService', 'userCtrl', 'userService', 'storyService', 'storyCtrl', 'allStoriesCtrl', 'profileCtrl', 'profileService', 'reverseDirective'])
 
-	$httpProvider.interceptors.push('AuthInterceptor');
+			   .config(function($httpProvider){
 
-})
+		$httpProvider.interceptors.push('AuthInterceptor');
+
+	});
+
+})();

@@ -1,10 +1,11 @@
 {
-  "name": "userStory",
+  "name": "write",
   "version": "1.0.0",
   "description": "User Story Application",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Richard Burk Orofeo",
   "license": "ISC",
@@ -16,5 +17,26 @@
     "mongoose": "^4.0.2",
     "morgan": "^1.5.2",
     "socket.io": "^1.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chardyy/writeDown.git"
+  },
+  "keywords": [
+    "write"
+  ],
+  "bugs": {
+    "url": "https://github.com/chardyy/writeDown/issues"
+  },
+  "homepage": "https://github.com/chardyy/writeDown#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-qunit": "^0.7.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-typescript": "^0.6.2"
   }
 }

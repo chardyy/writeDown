@@ -1,10 +1,13 @@
-angular.module('reverseDirective', [])
+(function(){
+	'use strict';
 
-.filter('reverse', function(){
+	angular.module('reverseDirective', [])
+	.filter('reverse', function(){
 
-	return function(items){
-		if(!items){	return; }
-		
-		return items.slice().reverse();
-	}
-});
+		return function(items){
+			if(!items){	return; }
+			
+			return items.slice().reverse();
+		};
+	});
+})();

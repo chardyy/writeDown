@@ -1,13 +1,16 @@
-angular.module('profileService', [])
+(function(){
+	'use strict';
 
+	angular.module('profileService', [])
+	.factory('Profile', function($http){
 
-.factory('Profile', function($http){
+		var profileFactory = {};
 
-	var profileFactory = {};
+		profileFactory.update = function(profileData){
+			return $http.put('/profile', profileData);
+		};
 
-	profileFactory.update = function(profileData){
-		return $http.put('/profile', profileData);
-	}
+		return profileFactory;
+	});
 
-	return profileFactory;
-});
+})();

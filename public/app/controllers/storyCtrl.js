@@ -28,7 +28,7 @@
 
     socketio.on('story', function(data){
         vm.stories.push(data);
-    })
+    });
 
-    })
+    });
 })();

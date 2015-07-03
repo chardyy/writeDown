@@ -15,7 +15,7 @@
 		.success(function(data){
 			//vm.processing = false;
 			vm.users = data;
-		})
+		});
 
 	})
 	.controller('UserCreateController', function(User, $location, $window){
@@ -32,8 +32,8 @@
 
 					$window.localStorage.setItem('token', response.data.token);
 					$location.path('/');
-				})
-		}
-	})
+				});
+		};
+	});
 
 })();
