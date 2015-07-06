@@ -2,38 +2,20 @@
 	'use strict';
 
 	angular.module('userCtrl', ['userService'])
+		   .controller('UserController', UserController);
 
+		   UserController.$inject = ['User'];
 
-	.controller('UserController', function(User){
+		   function UserController(User){
+			
+				var vm = this;
 
+				//vm.processing = true;
 
-	var vm = this;
-
-	//vm.processing = true;
-
-	user.all()
-		.success(function(data){
-			//vm.processing = false;
-			vm.users = data;
-		});
-
-	})
-	.controller('UserCreateController', function(User, $location, $window){
-
-		var vm = this;
-
-		vm.signupUser = function(){
-			vm.message = '';
-
-			User.create(vm.userData)
-				.then(function(response){
-					vm.userData = {};
-					vm.message = response.data.message;
-
-					$window.localStorage.setItem('token', response.data.token);
-					$location.path('/');
-				});
-		};
-	});
-
+				user.all()
+					.success(function(data){
+					//vm.processing = false;
+					vm.users = data;
+				});		   	
+		   }
 })();
