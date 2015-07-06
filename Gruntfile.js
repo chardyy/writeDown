@@ -1,27 +1,19 @@
 (function(){
+
   'use strict';
     module.exports = function(grunt) {
 
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
         
-        typescript: {
-          options: {
-            module: 'commonjs'
-          },
-
-          all: {
-            src: ['./www/plsRemindMe.Web/js/*/*.ts'],
-            dest: './www/plsRemindMe/js/_output'
-          }
-        },
-
+       
         jshint: {
           options: {
             force: false
           },
-          files: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js', 'test/**/*.spec.js'],
-          all: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js', 'test/**/*.spec.js']
+
+          files: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js', 'tests/**.tests.js'],
+          all: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js', 'test/**/*.tests.js']
         },
 
          watch: {
@@ -34,7 +26,7 @@
               enabled: true,
               max_jshint_notifications: 3, // maximum number of notifications from jshint output
               success: true, // whether successful grunt executions should be notified automatically
-              duration: 3 // the duration of notification in seconds, for `notify-send only
+              duration: 1 // the duration of notification in seconds, for `notify-send only
             }
         },
 
@@ -48,8 +40,22 @@
           },
       
           all: { src: ['tests/*.js'] }
-        }
+        }, 
 
+        notify: {
+            task_name: {
+                options: {
+                  // Task-specific options go here.
+                }
+            },
+
+            watch: {
+                options: {
+                    title: 'Task Complete',  // optional
+                    message: 'SASS and Uglify finished running', //required
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-notify');
@@ -61,11 +67,9 @@
 
     //register all the tasks
     grunt.registerTask('default', ['jshint', 'simplemocha']);
-    grunt.registerTask('development', ['jshint', 'simplemocha']);
+    grunt.registerTask('development', ['jshint', 'simplemocha:all', 'notify:watch']);
     grunt.task.run('notify_hooks');
-    grunt.task.run('simplemocha');
-    
-    
+    grunt.task.run('simplemocha:all');
   };
 
 })();
