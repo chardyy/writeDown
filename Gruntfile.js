@@ -20,7 +20,8 @@
           options: {
             force: false
           },
-          files: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js'] 
+          files: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js', 'test/**/*.spec.js'],
+          all: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js', 'test/**/*.spec.js']
         },
 
          watch: {
@@ -38,27 +39,32 @@
         },
 
         simplemocha: {
-          test: {
-            src: ['tests/**/*.html'],
-            options: {
-              reporter: 'spec',
-              slow: 200,
-              timeout: 1000
-            }
+          options: {
+              globals: ['expect'],
+              timeout: 3000,
+              ignoreLeaks: false,
+              ui: 'bdd',
+              reporter: 'tap'
           },
+      
+          all: { src: ['tests/*.js'] }
         }
 
-      });
+    });
 
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-simple-mocha');
+    
 
     //register all the tasks
     grunt.registerTask('default', ['jshint', 'simplemocha']);
+    grunt.registerTask('development', ['jshint', 'simplemocha']);
     grunt.task.run('notify_hooks');
+    grunt.task.run('simplemocha');
+    
     
   };
 

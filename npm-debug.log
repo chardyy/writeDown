@@ -1,0 +1,200 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bcrypt-nodejs' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose install initial load of /home/richard/writeDown/package.json
+5 warn package.json write@1.0.0 No README data
+6 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/body-parser/package.json
+7 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/chai/package.json
+8 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/expect.js/package.json
+9 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/express/package.json
+10 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt/package.json
+11 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-contrib-clean/package.json
+12 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-contrib-concat/package.json
+13 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-contrib-jshint/package.json
+14 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-contrib-qunit/package.json
+15 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-contrib-uglify/package.json
+16 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-contrib-watch/package.json
+17 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-mocha/package.json
+18 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-mocha-test/package.json
+19 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-notify/package.json
+20 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-simple-mocha/package.json
+21 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/grunt-typescript/package.json
+22 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/mocha/package.json
+23 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/mongoose/package.json
+24 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/morgan/package.json
+25 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/requirejs/package.json
+26 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/socket.io/package.json
+27 verbose installManyTop reading scoped package data from /home/richard/writeDown/node_modules/yeoman-generator/package.json
+28 info package.json grunt@0.4.5 No license field.
+29 info package.json grunt-mocha-test@0.12.7 No license field.
+30 info package.json grunt-simple-mocha@0.4.0 No license field.
+31 info package.json expect.js@0.3.1 No license field.
+32 info package.json grunt-contrib-clean@0.6.0 No license field.
+33 info package.json grunt-contrib-concat@0.5.1 No license field.
+34 info package.json grunt-contrib-jshint@0.11.2 No license field.
+35 info package.json grunt-contrib-qunit@0.7.0 No license field.
+36 info package.json grunt-contrib-uglify@0.9.1 No license field.
+37 info package.json grunt-contrib-watch@0.6.1 No license field.
+38 info package.json grunt-mocha@0.4.13 No license field.
+39 info package.json grunt-notify@0.4.1 No license field.
+40 info package.json grunt-typescript@0.6.2 No license field.
+41 info package.json mocha@1.16.2 No license field.
+42 info package.json requirejs@2.1.18 No license field.
+43 info package.json socket.io@1.3.5 No license field.
+44 verbose readDependencies loading dependencies from /home/richard/writeDown/package.json
+45 silly cache add args [ 'bcrypt-nodejs@0.0.3', null ]
+46 verbose cache add spec bcrypt-nodejs@0.0.3
+47 silly cache add parsed spec { raw: 'bcrypt-nodejs@0.0.3',
+47 silly cache add   scope: null,
+47 silly cache add   name: 'bcrypt-nodejs',
+47 silly cache add   rawSpec: '0.0.3',
+47 silly cache add   spec: '0.0.3',
+47 silly cache add   type: 'version' }
+48 silly addNamed bcrypt-nodejs@0.0.3
+49 verbose addNamed "0.0.3" is a plain semver version for bcrypt-nodejs
+50 silly mapToRegistry name bcrypt-nodejs
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/bcrypt-nodejs
+54 verbose addNameVersion registry:https://registry.npmjs.org/bcrypt-nodejs not in flight; fetching
+55 verbose request uri https://registry.npmjs.org/bcrypt-nodejs
+56 verbose request no auth needed
+57 info attempt registry request try #1 at 11:02:11
+58 verbose request id d9b12d6722185e1d
+59 http request GET https://registry.npmjs.org/bcrypt-nodejs
+60 http 200 https://registry.npmjs.org/bcrypt-nodejs
+61 silly get cb [ 200,
+61 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+61 silly get     etag: '"955P2XI0F7D7MBGWAA15T2C8V"',
+61 silly get     'content-type': 'application/json',
+61 silly get     'cache-control': 'max-age=60',
+61 silly get     'content-length': '8408',
+61 silly get     'accept-ranges': 'bytes',
+61 silly get     date: 'Mon, 06 Jul 2015 03:02:11 GMT',
+61 silly get     via: '1.1 varnish',
+61 silly get     age: '0',
+61 silly get     connection: 'keep-alive',
+61 silly get     'x-served-by': 'cache-hkg6823-HKG',
+61 silly get     'x-cache': 'MISS',
+61 silly get     'x-cache-hits': '0',
+61 silly get     'x-timer': 'S1436151731.297697,VS0,VE167',
+61 silly get     vary: 'Accept' } ]
+62 verbose get saving bcrypt-nodejs to /home/richard/.npm/registry.npmjs.org/bcrypt-nodejs/.cache.json
+63 silly mapToRegistry name bcrypt-nodejs
+64 silly mapToRegistry using default registry
+65 silly mapToRegistry registry https://registry.npmjs.org/
+66 silly mapToRegistry uri https://registry.npmjs.org/bcrypt-nodejs
+67 verbose addRemoteTarball https://registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz not in flight; adding
+68 verbose addRemoteTarball [ 'https://registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz',
+68 verbose addRemoteTarball   'c60917f26dc235661566c681061c303c2b28842b' ]
+69 info retry fetch attempt 1 at 11:02:11
+70 info attempt registry request try #1 at 11:02:11
+71 http fetch GET https://registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz
+72 http fetch 200 https://registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz
+73 silly fetchAndShaCheck shasum c60917f26dc235661566c681061c303c2b28842b
+74 verbose addTmpTarball /tmp/npm-7429-9c6786d8/registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz not in flight; adding
+75 verbose addTmpTarball already have metadata; skipping unpack for bcrypt-nodejs@0.0.3
+76 silly cache afterAdd bcrypt-nodejs@0.0.3
+77 verbose afterAdd /home/richard/.npm/bcrypt-nodejs/0.0.3/package/package.json not in flight; writing
+78 verbose afterAdd /home/richard/.npm/bcrypt-nodejs/0.0.3/package/package.json written
+79 silly install resolved [ { name: 'bcrypt-nodejs',
+79 silly install resolved     description: 'A native JS bcrypt library for NodeJS.',
+79 silly install resolved     main: './bCrypt',
+79 silly install resolved     author: { name: 'Shane Girish', email: 'shaneGirish@gmail.com' },
+79 silly install resolved     version: '0.0.3',
+79 silly install resolved     repository:
+79 silly install resolved      { type: 'git',
+79 silly install resolved        url: 'https://github.com/shaneGirish/bcryptJS.git' },
+79 silly install resolved     bugs: { url: 'https://github.com/shaneGirish/bcrypt-nodejs/issues' },
+79 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+79 silly install resolved     keywords:
+79 silly install resolved      [ 'bcrypt',
+79 silly install resolved        'javascript',
+79 silly install resolved        'js',
+79 silly install resolved        'hash',
+79 silly install resolved        'password',
+79 silly install resolved        'auth',
+79 silly install resolved        'authentication',
+79 silly install resolved        'encryption',
+79 silly install resolved        'crypt',
+79 silly install resolved        'crypto' ],
+79 silly install resolved     _id: 'bcrypt-nodejs@0.0.3',
+79 silly install resolved     dist:
+79 silly install resolved      { shasum: 'c60917f26dc235661566c681061c303c2b28842b',
+79 silly install resolved        tarball: 'http://registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz' },
+79 silly install resolved     _npmVersion: '1.2.0',
+79 silly install resolved     _npmUser: { name: 'shanegirish', email: 'shaneGirish@gmail.com' },
+79 silly install resolved     maintainers: [ [Object] ],
+79 silly install resolved     directories: {},
+79 silly install resolved     _shasum: 'c60917f26dc235661566c681061c303c2b28842b',
+79 silly install resolved     _resolved: 'https://registry.npmjs.org/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz',
+79 silly install resolved     _from: 'bcrypt-nodejs@0.0.3' } ]
+80 info install bcrypt-nodejs@0.0.3 into /home/richard/writeDown
+81 info installOne bcrypt-nodejs@0.0.3
+82 verbose installOne of bcrypt-nodejs to /home/richard/writeDown not in flight; installing
+83 verbose lock using /home/richard/.npm/_locks/bcrypt-nodejs-8b76bd1bfdf466aa.lock for /home/richard/writeDown/node_modules/bcrypt-nodejs
+84 silly install write writing bcrypt-nodejs 0.0.3 to /home/richard/writeDown/node_modules/bcrypt-nodejs
+85 verbose unbuild node_modules/bcrypt-nodejs
+86 silly gentlyRm /home/richard/writeDown/node_modules/bcrypt-nodejs is being purged from base /home/richard/writeDown
+87 verbose gentlyRm don't care about contents; nuking /home/richard/writeDown/node_modules/bcrypt-nodejs
+88 verbose tar unpack /home/richard/.npm/bcrypt-nodejs/0.0.3/package.tgz
+89 verbose tar unpacking to /home/richard/writeDown/node_modules/bcrypt-nodejs
+90 silly gentlyRm /home/richard/writeDown/node_modules/bcrypt-nodejs is being purged
+91 verbose gentlyRm don't care about contents; nuking /home/richard/writeDown/node_modules/bcrypt-nodejs
+92 silly gunzTarPerm modes [ '755', '644' ]
+93 silly gunzTarPerm extractEntry package.json
+94 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+95 silly gunzTarPerm extractEntry .npmignore
+96 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+97 silly gunzTarPerm extractEntry README.md
+98 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+99 silly gunzTarPerm extractEntry LICENSE
+100 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+101 silly gunzTarPerm extractEntry bCrypt.js
+102 silly gunzTarPerm modified mode [ 'bCrypt.js', 438, 420 ]
+103 silly gunzTarPerm extractEntry test-async.js
+104 silly gunzTarPerm modified mode [ 'test-async.js', 438, 420 ]
+105 silly gunzTarPerm extractEntry test-sync.js
+106 silly gunzTarPerm modified mode [ 'test-sync.js', 438, 420 ]
+107 silly gunzTarPerm extractEntry .gitattributes
+108 silly gunzTarPerm modified mode [ '.gitattributes', 438, 420 ]
+109 verbose write writing to /home/richard/writeDown/node_modules/bcrypt-nodejs/package.json
+110 info preinstall bcrypt-nodejs@0.0.3
+111 verbose readDependencies loading dependencies from /home/richard/writeDown/node_modules/bcrypt-nodejs/package.json
+112 verbose readDependencies loading dependencies from /home/richard/writeDown/node_modules/bcrypt-nodejs/package.json
+113 silly install resolved []
+114 verbose about to build /home/richard/writeDown/node_modules/bcrypt-nodejs
+115 info build /home/richard/writeDown/node_modules/bcrypt-nodejs
+116 info linkStuff bcrypt-nodejs@0.0.3
+117 silly linkStuff bcrypt-nodejs@0.0.3 has /home/richard/writeDown/node_modules as its parent node_modules
+118 verbose linkBins bcrypt-nodejs@0.0.3
+119 verbose linkMans bcrypt-nodejs@0.0.3
+120 verbose rebuildBundles bcrypt-nodejs@0.0.3
+121 info install bcrypt-nodejs@0.0.3
+122 info postinstall bcrypt-nodejs@0.0.3
+123 verbose unlock done using /home/richard/.npm/_locks/bcrypt-nodejs-8b76bd1bfdf466aa.lock for /home/richard/writeDown/node_modules/bcrypt-nodejs
+124 verbose validateInstall loading /home/richard/writeDown/package.json for validation
+125 verbose stack Error: The package mocha does not satisfy its siblings' peerDependencies requirements!
+125 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+125 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+125 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+125 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+125 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+125 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+125 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+125 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+125 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+125 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+126 verbose cwd /home/richard/writeDown
+127 error Linux 3.13.0-37-generic
+128 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "bcrypt-nodejs"
+129 error node v0.12.5
+130 error npm  v2.11.2
+131 error code EPEERINVALID
+132 error peerinvalid The package mocha does not satisfy its siblings' peerDependencies requirements!
+132 error peerinvalid Peer grunt-mocha-test@0.12.7 wants mocha@>=1.20.0
+133 verbose exit [ 1, true ]
