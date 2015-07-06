@@ -168,10 +168,10 @@ module.exports = function(app, express, io){
 
 	   			if(err){
 	   				res.send(err);
-	   				return
+	   				return;
 	   			}
 
-	   			io.emit('story', newStory)
+	   			io.emit('story', newStory);
 	   			res.json({
 	   				message: "New Story Created"
 	   			});
@@ -200,4 +200,4 @@ module.exports = function(app, express, io){
 	
 	return api; 	//return the api for the front-end.
 
-} //end of module exports
+}; //end of module exports

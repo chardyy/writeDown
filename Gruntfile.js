@@ -20,7 +20,7 @@
           options: {
             force: false
           },
-          files: ['Gruntfile.js', 'public/app/**/*.js'] 
+          files: ['Gruntfile.js', 'public/app/**/*.js', 'app/**/*.js'] 
         },
 
          watch: {
