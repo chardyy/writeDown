@@ -3,8 +3,21 @@
 <head>
 	<base href="/">
 
-    <title>Write-it</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <title>Lytte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+
+    <!-- semantic ui: button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/components/button.min.css">
+    <!-- semantic ui: form -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/components/form.min.css">
+    <!-- semantic ui: container -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/components/container.min.css">
+    <!-- semantic ui: menu  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/components/menu.min.css">
+    <!-- semantic ui: dropdown -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.8/components/dropdown.min.css">
+
 
     <!-- favicon -->
     <link rel="shortcut icon" href="dist/img/favicon.ico">
@@ -13,34 +26,43 @@
 
 <body ng-controller="MainController as main">
 
-<header>
-	<div class="navbar navbar-default">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="/" class="navbar-brand"><span class="glyphicon glyphicon-book"></span>Write-it</a>
 
-				<a href="/allStories" class="navbar-brand"><span class="glyphicon glyphicon-cloud"></span>All Story</a>
-			</div>
+<div class="ui secondary  menu">
+    <a href="/" class="active item">
+        <i class="fa fa-book"></i> Lytte
+    </a>
 
-			<ul class="nav navbar-nav">
-				<li><a href="/users"></a></li>
-			</ul>
+    <a href="/allStories" class="item" ng-show="main.loggedIn">
+        <i class="fa fa-comments-o"></i> {{ main.user.name }}'s story
+    </a>
 
-			<ul class="nav navbar-nav navbar-right">
-				<li ng-if="!main.loggedIn"><a href="/login">Login</a></li>				
-				<li ng-if="!main.loggedIn"><a href="/signup">Signup</a></li>				
-				<li ng-if="main.loggedIn"><a href="/profile">Hi! <b>{{ main.user.name }}</b> </a></li>				
-				<li ng-if="main.loggedIn"><a href="/login" ng-click="main.doLogout()">Logout</a></li>				
-			</ul>
-		</div>
-	</div>
 
-</header>
+    <div class="right menu">
+        <div class="item">
+            <a href="/login" class="item" ng-if="!main.loggedIn">
+                <i class="fa fa-sign-in"></i> Login
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="/profile" class="item" ng-if="main.loggedIn">
+                Hi! <b>{{ main.user.name }}</b>
+            </a>
+        </div>
+
+        <a href="/login" class="ui item" ng-if="main.loggedIn" ng-click="main.doLogout()">
+            <i class="fa fa-sign-out"></i> Logout
+        </a>
+
+        <a href="/signup" class="ui item" ng-if="!main.loggedIn">
+            Signup
+        </a>
+    </div>
+</div>
 
 <main class="container">
 	<div ng-view></div>
 </main>
-
 
 
 
@@ -68,7 +90,6 @@
 <script type="text/javascript" src="app/directives/reverse.js"></script>
 
 <script type="text/javascript" src="app/app.route.js"></script>
-
 
 </body>
 </html>

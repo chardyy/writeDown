@@ -1,18 +1,12 @@
-<div class="container" ng-controller="MainController as login">
-	<div class="row">
-		<div class="col-sm-6 col-md-4 col-md-offset-4">
-			<form class="form-signin" method="post" ng-submit="login.doLogin()">
-				<fieldset>
-					<legend>Login</legend>
-
-					<input type="text" class="form-control" name="username" ng-model="login.loginData.username" placeholder="Username"/>
-					<br/>
-					<input type="password" class="form-control" name="password" ng-model="login.loginData.password" placeholder="Password"/>
-					<br/>
-
-					<button type="submit" class="btn btn-primary">Login</button>
-				</fieldset>
-			</form>
-		</div>
-	</div>
+<div class="ui container" ng-controller="MainController as login">
+    <form class="ui form" ng-submit="login.doLogin()">
+        <div class="field">
+            <input type="text" name="username" ng-model="login.loginData.username" placeholder="Username">
+        </div>
+        <div class="field">
+            <input type="password" name="password" ng-model="login.loginData.password" placeholder="Password">
+        </div>
+        <button class="ui button" type="submit">Login</button>
+    </form>
 </div>
+

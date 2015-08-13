@@ -1,16 +1,12 @@
-<div class="container" ng-controller="ProfileController as profile">
-	<div class="row">
-		<div class="col-sm-6 col-md-4 col-md-offset-4">
-			<form method="put" ng-submit="user.updateUser()">
-				<fieldset>
-					<legend>Edit</legend>
-						<input type="text" name="name" class="form-control" ng-model="user.userData.name" placeholder="Name"/><br/>
-						<input type="text" name="username" class="form-control" ng-model="user.userData.username" placeholder="Username"/><br/>
-			
-						<br/>
-						<button type="submit" class="btn btn-info">Update</button>
-				</fieldset>
-			</form>
-		</div>
-	</div>
+<div class="ui container" ng-controller="MainController as login">
+    <form class="ui form" ng-submit="login.doLogin()">
+        <div class="field">
+            <input type="text" name="username" ng-model="login.loginData.username" placeholder="Username">
+        </div>
+        <div class="field">
+            <input type="password" name="password" ng-model="login.loginData.password" placeholder="Password">
+        </div>
+        <button class="ui button" type="submit">Edit</button>
+    </form>
 </div>
+

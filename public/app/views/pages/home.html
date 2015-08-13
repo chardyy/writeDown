@@ -6,7 +6,7 @@
 
 	<div>
 		<p>Login to write your story.</p>
-		<a href="/login" class="btn btn-info">Login</a> or <a href="/allStories" class="btn btn-info">See All Stories</a>
+		<a href="/login" class="ui primary button">Login</a> or <a href="/allStories" class="ui primary button">See All Stories</a>
 	</div>
 </div>
 
@@ -19,26 +19,33 @@
 
 	<div class="col-md-4" ng-controller="StoryController as story">
 		<div class="row">
-			<div class="panel panel-primary">
+			<div class="panel panel-primary" style="margin-left: 35%; margin-right: 35%">
 				<div class="panel-heading">What's Your Story?</div>
 
 				<div class="panel-body">
 					
-					<form ng-submit="story.createStory()">
-						<input class="form-control input-lg" type="text" name="story" ng-model="story.storyData.content" placeholder="Your Story..." required/>
-						
+					<form class="ui form" ng-submit="story.createStory()">
+                        <div class="field">
+                            <input type="text" name="story" ng-model="story.storyData.content" placeholder="..." required/>
+                        </div>
 					</form>
 				</div>		
 			</div>
-
-			<div class="panel panel-success">
-				<div class="panel-heading">Your Stories</div>
-
-					<div class="panel-body" ng-repeat="story in story.stories | reverse">
-
+<br/>
+			<!--<div class="panel panel-success">
+				<div class="panel-heading" style="margin-left: 35%; margin-right: 35%">______________</div>
+					<div class="panel-body" ng-repeat="story in story.stories | reverse" style="margin-left: 35%; margin-right: 35%">
 						<p>{{ story.content }}</p>
 					</div>
-			</div>
+			</div>-->
+
+            <div class="ui container">
+                <p style="margin-left: 35%; margin-right: 35%">sir</p>
+            </div>
+
+            <div class="ui container">
+                <p style="margin-left: 35%; margin-right: 35%">dir</p>
+            </div>
 		</div>
 	</div>
 
