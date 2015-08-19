@@ -21,12 +21,12 @@
 		});
 
 		vm.doLogin = function(){
-			vm.processing = true;
+			vm.loading = true;
 			vm.error = '';
 
 			Auth.login(vm.loginData.username, vm.loginData.password)
 				.success(function(data){
-					vm.processing = false;
+					vm.loading = false;
 
 					Auth.getUser()
 						.then(function(data){

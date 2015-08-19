@@ -4,6 +4,7 @@
 
 	var User = require('../models/user');
 	var Story = require('../models/story');
+    var Comment = require('../models/comment');
 	var config = require('../../config');
 
 	//use instance
@@ -201,9 +202,44 @@
 				res.json(req.decoded);
 			});
 		//
-		
-		return api; 	//return the api for the front-end.
 
+        /*
+        * Comment API end-point.
+        * */
+
+        api.route('/comment')
+            .post(function(req, res){
+                var comment = new Comment({
+                    commented_by: req.decoded.id,
+                    commentBody: req.body.comment,
+                    commented_story: req.decoded.id
+                });
+                comment.save(function(err, newComment){
+
+                    if(err){
+                        res.send(err);
+                        return;
+                    }
+                    io.emit('comment', newComment);
+
+                    res.json({
+                        message: "New Comment Created"
+                    });
+                });
+            })
+            .get(function(req, res){
+
+                Comment.find({ commented_story: req.decoded.id }, function(err, comments){
+
+                    if(err){
+                        res.send(err);
+                        return;
+                    }
+
+                    res.json(comments);
+                });
+            });
+		return api; 	//return the api for the front-end.
 	}; //end of module exports
-	
+
 })();

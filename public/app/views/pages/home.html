@@ -1,12 +1,12 @@
 <div class="jumbotron text-center" ng-if="!main.loggedIn">
-	
+
 	<div>
 		<h1>Come join us! Its free, and always will be!</h1>
 	</div>
 
 	<div>
-		<p>Login to write your story.</p>
-		<a href="/login" class="ui primary button">Login</a> or <a href="/allStories" class="ui primary button">See All Stories</a>
+		<p>Login to write your confession.</p>
+		<a href="/login" class="ui primary button">Login</a> or  <a href="/allStories" class="ui primary button">See All Stories</a>
 	</div>
 </div>
 
@@ -14,42 +14,84 @@
 
 <div class="row" ng-if="main.loggedIn">
 	<div class="col-md-3">
-		
 	</div>
 
 	<div class="col-md-4" ng-controller="StoryController as story">
 		<div class="row">
+
+            <p class="center" ng-show="story.loading" style="margin-left: 50%; margin-right: 35%">
+                <span class="fa fa-spinner fa-spin fa-5x"></span>
+            </p>
+
 			<div class="panel panel-primary" style="margin-left: 35%; margin-right: 35%">
-				<div class="panel-heading">What's Your Story?</div>
+				<div class="panel-heading">Say something?</div>
 
 				<div class="panel-body">
-					
+
 					<form class="ui form" ng-submit="story.createStory()">
                         <div class="field">
                             <input type="text" name="story" ng-model="story.storyData.content" placeholder="..." required/>
                         </div>
 					</form>
-				</div>		
+				</div>
 			</div>
-<br/>
-			<!--<div class="panel panel-success">
-				<div class="panel-heading" style="margin-left: 35%; margin-right: 35%">______________</div>
+                    <br/>
+			<div class="panel panel-success">
+				<div class="panel-heading" style="margin-left: 35%; margin-right: 35%"><u><strong>Confessions:</strong></u></div>
 					<div class="panel-body" ng-repeat="story in story.stories | reverse" style="margin-left: 35%; margin-right: 35%">
 						<p>{{ story.content }}</p>
+
+                        <!--<div ng-controller="CommentController">
+                            <form class="ui form" ng-submit="addComment()">
+                                <div class="field">
+                                    <input type="text" name="comment" ng-model="commentData.comment" placeholder="Comment..." autofocus/>
+                                </div>
+                            </form>
+                        </div>-->
+
+                        <div ng-controller="CommentController">
+                            <div ng-repeat="comment in comments">
+                                {{comment.commentBody}}
+                            </div>
+
+                            <a href="#" ng-click="showComment = ! showComment">
+                                Comment
+                                <div ng-show="showComment">
+                                    <form class="ui form" ng-submit="addComment()">
+                                        <div class="field">
+                                            <input type="text" name="comment" ng-model="commentData.comment" placeholder="Comment..." autofocus/>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </a>
+                        </div>
+
+                        <!--<a href="#" ng-click="showComment = ! showComment">
+                            Comment
+                            <div ng-show="showComment">
+                                <form class="ui form" ng-submit="addComment()">
+                                    <div class="field">
+                                        <input type="text" name="comment" ng-model="commentData.comment" placeholder="Comment..." autofocus/>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </a>-->
+                        <!--<p class="center" ng-show="story.loading" style="margin-left: 50%; margin-right: 35%">
+                            <span class="fa fa-spinner fa-spin fa-5x"></span>
+                        </p>-->
+                        <!--<a href="/comment">Comment</a>-->
+                           <!-- <form class="ui form" ng-submit="story.addComment()">
+                                <div class="field">
+                                    <input type="text" name="comment" ng-model="story.commentData.comment" placeholder="Comment..." autofocus/>
+                                </div>
+                            </form>-->
+
+
 					</div>
-			</div>-->
-
-            <div class="ui container">
-                <p style="margin-left: 35%; margin-right: 35%">sir</p>
-            </div>
-
-            <div class="ui container">
-                <p style="margin-left: 35%; margin-right: 35%">dir</p>
-            </div>
+			</div>
 		</div>
 	</div>
 
-	<div class="col-md-3">
-		
-	</div>
 </div>
