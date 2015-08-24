@@ -7,12 +7,10 @@
 
         var vm = this;
 
-        vm.stories = [];
         Story.allStory()
          .success(function(data){
             vm.stories = data;
          });
-
 
         vm.createStory = function(){
             console.log('new story');

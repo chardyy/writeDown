@@ -56,6 +56,11 @@
 
                             <a href="#" ng-click="showComment = ! showComment">
                                 Comment
+
+                                <p class="center" ng-show="loading" style="margin-left: 50%; margin-right: 35%">
+                                    <span class="fa fa-spinner fa-spin fa-3x"></span>
+                                </p>
+
                                 <div ng-show="showComment">
                                     <form class="ui form" ng-submit="addComment()">
                                         <div class="field">
@@ -75,9 +80,8 @@
                                         <input type="text" name="comment" ng-model="commentData.comment" placeholder="Comment..." autofocus/>
                                     </div>
                                 </form>
-                            </div>
+                            </div></a>-->
 
-                        </a>-->
                         <!--<p class="center" ng-show="story.loading" style="margin-left: 50%; margin-right: 35%">
                             <span class="fa fa-spinner fa-spin fa-5x"></span>
                         </p>-->
@@ -87,8 +91,6 @@
                                     <input type="text" name="comment" ng-model="story.commentData.comment" placeholder="Comment..." autofocus/>
                                 </div>
                             </form>-->
-
-
 					</div>
 			</div>
 		</div>

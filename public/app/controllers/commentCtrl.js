@@ -14,8 +14,9 @@
         });
 
         $scope.addComment = function(){
+            $scope.loading = true;
             console.log('New Comment Created');
-
+            $scope.loading = false;
             $scope.message = '';
             $scope.loading = true;
             Comment.createComment($scope.commentData)

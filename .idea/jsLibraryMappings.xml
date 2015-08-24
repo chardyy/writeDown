@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$" libraries="{writeDown node_modules}" />
     <file url="file://$PROJECT_DIR$/app/models/comment.js" libraries="{Node.js Globals}" />
     <file url="file://$PROJECT_DIR$/config.js" libraries="{Node.js Globals}" />
+    <file url="file://$PROJECT_DIR$/public/app/app.route.js" libraries="{Node.js Globals}" />
     <file url="file://$PROJECT_DIR$/public/app/services/storyService.js" libraries="{ECMAScript 6, Node.js Globals}" />
   </component>
 </project>
